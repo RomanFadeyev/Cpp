@@ -1,0 +1,1820 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "bcgbarres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\WinXPManifest.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LIGHTBULB           BITMAP                  "res\\litebulb.bmp"
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_WORKSPACE           BITMAP                  "res\\workspc.bmp"
+IDB_CLASS_VIEW          BITMAP                  "res\\classview.bmp"
+IDB_RESOURCE_VIEW       BITMAP                  "res\\resource.bmp"
+IDR_BUILD               BITMAP                  "res\\build.bmp"
+IDB_LOGO                BITMAP                  "res\\logolarge.bmp"
+IDR_MENU_IMAGES         BITMAP                  "res\\menuimages.bmp"
+IDB_CHECK               BITMAP                  "res\\check.bmp"
+IDB_FILE_VIEW           BITMAP                  "res\\FileView.bmp"
+IDB_DEBUG_VIEW          BITMAP                  "res\\DebugImages.bmp"
+IDR_EDIT                BITMAP                  "res\\toolbar1.bmp"
+IDR_DEBUG               BITMAP                  "res\\bmp00001.bmp"
+IDR_FULLSCREEN          BITMAP                  "res\\bmp00002.bmp"
+IDB_STATISTIC           BITMAP                  "res\\Statistic.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TIP DIALOGEX 0, 0, 279, 162
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip of the Day"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Next Tip",IDC_NEXTTIP,169,141,50,14,WS_GROUP
+    CONTROL         "&Show Tips on StartUp",IDC_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,11,145,114,10
+    DEFPUSHBUTTON   "&Close",IDOK,222,141,50,14,WS_GROUP
+    LTEXT           "Some String",IDC_TIPSTRING,20,37,235,61,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_BACKGRND,"Static",SS_ETCHEDFRAME,7,7,265,128
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 221, 165
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MultiTranslator"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "<Copyright>",IDC_COPYRIGHT,11,73,180,19
+    DEFPUSHBUTTON   "OK",IDOK,162,147,56,14,WS_GROUP
+    CONTROL         "Support Mail",IDC_MAIL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,12,106,46,14
+    CONTROL         105,IDC_LOGO,"Static",SS_BITMAP,3,1,215,50,
+                    WS_EX_STATICEDGE
+    LTEXT           " Version",IDC_STATIC,11,59,26,8,SS_NOPREFIX
+    LTEXT           "<Version>",IDC_VERSION,42,59,176,8
+    LTEXT           "Warning: This program is protected by copyright law and international treaties",
+                    IDC_STATIC,11,120,182,20
+    ICON            IDR_MAINFRAME,IDC_STATIC,193,68,21,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,142,214,1
+    CONTROL         "Company Url",IDC_URL,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    11,94,46,14
+END
+
+IDD_GOTOLINE DIALOGEX 0, 0, 165, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Go To"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Enter new line number",-1,4,3,71,8,NOT WS_GROUP
+    EDITTEXT        IDC_GOTOLINE_GOTOLINE,4,13,101,12,ES_NUMBER
+    LTEXT           "Current line:",-1,4,31,38,8,NOT WS_GROUP
+    LTEXT           "0123456789",IDC_GOTOLINE_CURRENT_LINE,47,31,41,8,NOT 
+                    WS_GROUP
+    LTEXT           "Last line:",-1,4,41,38,8,NOT WS_GROUP
+    LTEXT           "0123456789",IDC_GOTOLINE_LAST_LINE,47,41,41,8,NOT 
+                    WS_GROUP
+    DEFPUSHBUTTON   "&Go To",IDOK,115,5,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,115,22,46,14
+END
+
+IDD_FIND DIALOGEX 0, 0, 257, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Find"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,3,6,42,8
+    COMBOBOX        IDC_COMBO_FIND,50,4,147,50,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_CHECK_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,33,92,10
+    CONTROL         "Match &case",IDC_CHECK_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,45,92,10
+    CONTROL         "Regular &expression",IDC_CHECK_REGEXP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,57,92,10
+    GROUPBOX        "Direction",IDC_STATIC,109,24,81,34,WS_GROUP
+    CONTROL         "&Up",IDC_RADIO_DIR_UP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,117,32,25,12
+    CONTROL         "&Down",IDC_STATIC,"Button",BS_AUTORADIOBUTTON,117,44,35,
+                    12
+    DEFPUSHBUTTON   "&Find Next",IDOK,204,4,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,204,20,50,14
+    GROUPBOX        "Scope",IDC_STATIC,109,60,82,34,WS_GROUP
+    CONTROL         "&Gobal",IDC_RADIO_SCOPE_GLOBAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,118,69,39,12
+    CONTROL         "&Selected",IDC_RADIO_SCOPE_SELECTION,"Button",
+                    BS_AUTORADIOBUTTON,118,81,50,11
+    CONTROL         "Wrap aroun&d",IDC_CHECK_WRAP_AROUND,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,69,92,10
+    GROUPBOX        "Options",IDC_STATIC,3,24,104,70
+END
+
+IDD_REPLACE DIALOGEX 0, 0, 257, 92
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Replace"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,4,5,44,8
+    COMBOBOX        IDC_COMBO_FIND,54,3,143,50,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_TABSTOP
+    LTEXT           "Re&place with:",IDC_STATIC,4,23,44,8
+    COMBOBOX        IDC_COMBO_REPLACE,54,21,143,50,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_CHECK_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,4,44,89,10
+    CONTROL         "Match &case",IDC_CHECK_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,4,55,89,10
+    CONTROL         "Regular &expression",IDC_CHECK_REGEXP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,4,66,89,10
+    CONTROL         "Wrap aroun&d",IDC_CHECK_WRAP_AROUND,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,4,77,89,10
+    DEFPUSHBUTTON   "&Find Next",IDC_FIND,204,3,50,14,WS_GROUP
+    PUSHBUTTON      "&Replace",IDC_REPLACE,204,19,50,14
+    PUSHBUTTON      "Replace &All",IDC_REPLACE_ALL,204,35,50,14
+    PUSHBUTTON      "Close",IDCANCEL,204,51,50,14
+    GROUPBOX        "Replace in",IDC_STATIC,104,44,93,40
+    CONTROL         "Wh&ole file",IDC_RADIO_SCOPE_GLOBAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,110,56,47,10
+    CONTROL         "&Selection",IDC_RADIO_SCOPE_SELECTION,"Button",
+                    BS_AUTORADIOBUTTON,110,69,45,10
+END
+
+IDD_OUTPUT DIALOGEX 0, 0, 240, 165
+STYLE DS_SETFONT | DS_3DLOOK | WS_MAXIMIZEBOX | WS_POPUP | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Output Window (Ctrl-U)"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_OUTPUTSCREEN,1,1,238,163,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY,WS_EX_CLIENTEDGE
+END
+
+IDD_FIND_IN_FILES DIALOGEX 0, 0, 259, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Find In Files"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,3,4,42,8
+    COMBOBOX        IDC_COMBO_FIND,48,3,146,50,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_CHECK_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_GROUP | WS_TABSTOP,48,
+                    22,89,10
+    CONTROL         "Match &case",IDC_CHECK_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,48,33,85,10
+    LTEXT           "Look in:",IDC_STATIC,3,50,26,8
+    COMBOBOX        IDC_COMBO_LOOK_IN,48,48,146,50,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Look in subfolders",IDC_CHECK_LOOK_IN_SUBFOLDERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,48,63,73,10
+    LTEXT           "File types:",IDC_STATIC,3,78,34,8
+    COMBOBOX        IDC_COMBO_FILE_TYPES,48,76,146,50,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_TABSTOP
+    LTEXT           "Separate file types masks with semicolons",IDC_STATIC,3,
+                    91,134,8
+    DEFPUSHBUTTON   "&Find",IDOK,206,3,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,206,19,50,14
+END
+
+IDD_ADD_RULE DIALOGEX 0, 0, 457, 277
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create new rule"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "OK",IDOK,375,7,78,14,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_RULE_NAME,4,17,170,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_CLIENTEDGE
+    COMBOBOX        IDC_COMBO_MODULES,183,17,172,69,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    LISTBOX         IDC_LIST1,8,76,156,129,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    CONTROL         "Terminal",IDC_IS_TERM,"Button",BS_AUTORADIOBUTTON,166,
+                    82,49,11,WS_EX_STATICEDGE
+    CONTROL         "Nonterminal",IDC_IS_UNTERM,"Button",BS_AUTORADIOBUTTON,
+                    166,94,49,11,WS_EX_STATICEDGE
+    CONTROL         "Optional",IDC_CHECK_OPTIONAL,"Button",BS_AUTOCHECKBOX | 
+                    BS_FLAT | WS_TABSTOP,166,105,49,11,WS_EX_STATICEDGE
+    PUSHBUTTON      "\nAdd to variant (Alt-A)",IDC_ADD_TO_VARIANT,165,122,52,
+                    12,NOT WS_TABSTOP
+    PUSHBUTTON      "Up\nMove item up (Ctrl-Up)",IDC_MOVE_TERM_UP,165,135,52,
+                    12,NOT WS_TABSTOP
+    PUSHBUTTON      "Dn\nMove Item Down (Ctrl-Down)",IDC_MOVE_TERM_DOWN,165,
+                    148,52,12,NOT WS_TABSTOP
+    PUSHBUTTON      "&New\nNew item (Insert)",IDC_NEW_TERM,165,162,52,12,NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Edit\nEdit Item (F2)",IDC_EDIT_ITEM,165,175,52,12,NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Del\nDelete Item (Ctrl-Delete)",IDC_DELETE_TERMS,165,
+                    188,52,12,NOT WS_TABSTOP
+    LISTBOX         IDC_LIST2,217,76,131,130,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "DblClk, F2 - change text",IDC_STATIC,11,210,116,14
+    LTEXT           "DblClk - include in the left list",IDC_STATIC,217,210,
+                    116,18
+    LTEXT           "Use CTRL and SHIFT for multiple allocation\nDo not forget about shortcuts. All buttons are accessible through a ALT and underlined letter in the name ",
+                    IDC_STATIC,11,219,335,17
+    LTEXT           "Error",IDC_STATIC_ERROR,11,257,334,11,NOT WS_VISIBLE
+    CONTROL         "Tab1",IDC_VAR_TAB,"SysTabControl32",TCS_TOOLTIPS,4,37,
+                    347,18,WS_EX_STATICEDGE
+    PUSHBUTTON      "Add variant",IDC_ADD_VARIANT,375,44,78,14,0,
+                    WS_EX_STATICEDGE
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_TRACKSELECT | TVS_FULLROWSELECT | 0x400,358,83,97,
+                    190,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,4,54,348,219
+    EDITTEXT        IDC_EDIT3,11,76,118,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,375,22,78,14,0,WS_EX_STATICEDGE
+    LTEXT           "Available terms",IDC_STATIC,217,66,48,9
+    LTEXT           "Terms in variant",IDC_STATIC,10,65,51,8
+    LTEXT           "Module",IDC_STATIC,185,6,169,9
+    LTEXT           "Result",IDC_STATIC,360,70,95,8
+    LTEXT           "Name of a rule",IDC_STATIC,6,6,160,8
+    COMBOBOX        IDC_COMBO_PLACE_RULES,179,242,172,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    LTEXT           "Place new rule behind the rule",IDC_STATIC,11,242,160,8
+END
+
+IDD_STATISTIC DIALOGEX 0, 0, 372, 271
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Grammatic optimization"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,301,5,68,14,0,WS_EX_STATICEDGE
+    CONTROL         "Tree1",IDC_TREE_RULES,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_FULLROWSELECT | 
+                    WS_TABSTOP | 0x800,2,12,145,189,WS_EX_STATICEDGE
+    LTEXT           "Statistic of using of variants",IDC_STATIC,2,3,132,8
+    CONTROL         "Tree1",IDC_TREE_RULES_OPT,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_FULLROWSELECT | WS_TABSTOP | 0x800,151,12,145,189,
+                    WS_EX_STATICEDGE
+    LTEXT           "Optimized structure",IDC_STATIC,151,3,132,8
+    PUSHBUTTON      "&Optimize",IDC_BUTTON_OPTIMIZE,301,21,68,14,0,
+                    WS_EX_STATICEDGE
+    CONTROL         "Progress1",IDC_OPTIMIZE_PROGRESS,"msctls_progress32",
+                    0x5,301,41,9,160
+    LISTBOX         IDC_LIST_MESSAGES,2,205,367,63,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""bcgbarres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""MTDEv.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "#define _BCGCONTROLBAR_STATIC_\r\n"
+    "#include ""bcgcontrolbar.rc""                          // BCG ControlBar resources\r\n"
+    "\r\n"
+    "// 1 TYPELIB ""MTDev.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MTDev.ico"
+IDR_DOC_PROJECT         ICON                    "res\\MTDevProject.ico"
+IDR_DOC_SOURCE          ICON                    "res\\MTDevDoc.ico"
+IDI_PROJECT_EMPTY       ICON                    "res\\ProjectEmpty.ico"
+IDI_PROJECT_SIMPLE      ICON                    "res\\ProjectSimple.ico"
+IDI_ITEM_NEW_ICON       ICON                    "res\\Item_New.ico"
+IDI_ITEM_EDIT_ICON      ICON                    "res\\Item_Edit.ico"
+IDI_ITEM_MOVE_ICON      ICON                    "res\\Item_Move.ico"
+IDI_ITEM_MOVEDOWN_ICON  ICON                    "res\\Item_MoveDown.ico"
+IDI_ITEM_MOVEUP_ICON    ICON                    "res\\Item_MoveUp.ico"
+IDI_ITEM_DELETE_ICON    ICON                    "res\\Item_Delete.ico"
+IDI_SYNTAX_DIAGRAMS     ICON                    "res\\sd.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVE_ALL
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_VIEW_WORKSPACE
+    BUTTON      ID_VIEW_OUTPUT
+    BUTTON      ID_VIEW_SCREEN
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_BUILD TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUILD_BUILD_PROJECT
+    BUTTON      ID_BUILD_STOP_BUILD
+END
+
+IDR_MENU_IMAGES TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_WINDOW_MANAGER
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_TOOLS_MACRO
+    BUTTON      ID_EDIT_REPLACE
+    BUTTON      ID_EDIT_TOGGLE_BOOKMARK
+    BUTTON      ID_EDIT_NEXT_BOOKMARK
+    BUTTON      ID_EDIT_PREV_BOOKMARK
+    BUTTON      ID_EDIT_CLEAR_BOOKMARKS
+    BUTTON      ID_PROPERTIES
+    BUTTON      ID_VIEW_WHITESPACE
+    BUTTON      ID_EDIT_FOLD_ALL
+    BUTTON      ID_VIEW_INDENTGUIDES
+    BUTTON      ID_VIEW_FOLD_MARGIN
+    BUTTON      ID_EDIT_ZOOM_IN
+    BUTTON      ID_EDIT_ZOOM_OUT
+    SEPARATOR
+    BUTTON      ID_OUTPUT_OPTIONS_AUTOCLEAR
+    BUTTON      ID_TOOLS_SYNTAX_DIAGRAMS
+    BUTTON      ID_DEBUG_DISABLE_BREAKPOINT
+    BUTTON      ID_VIEW_BREAKPOINTS
+    BUTTON      ID_VIEW_WATCH
+    BUTTON      ID_BREAKPOINTS_GOTO
+    BUTTON      ID_BREAKPOINTS_DELETE
+    BUTTON      ID_BREAKPOINTS_CLEAR_ALL
+    BUTTON      ID_BREAKPOINTS_DISABLE_ALL
+    BUTTON      ID_BREAKPOINTS_ENABLE_ALL
+    BUTTON      ID_BREAKPOINTS_DISABLE
+    BUTTON      ID_EDIT_COMPLETE_WORD
+    BUTTON      ID_EDIT_SYNC_EXPLORER
+    BUTTON      ID_EDIT_FIND_DECLARATION
+    BUTTON      ID_TOOLS_VIEW_LIBRARIES
+    BUTTON      ID_CLW_NEW_FOLDER
+    BUTTON      ID_CLW_DELETE
+    BUTTON      ID_PROJECT_ADD_FILES
+END
+
+IDR_EDIT TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_EDIT_TOGGLE_BOOKMARK
+    BUTTON      ID_EDIT_NEXT_BOOKMARK
+    BUTTON      ID_EDIT_PREV_BOOKMARK
+    BUTTON      ID_EDIT_CLEAR_BOOKMARKS
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_AUTOFORMAT
+    SEPARATOR
+    BUTTON      ID_EDIT_INCREASE_LINE_INDENT
+    BUTTON      ID_EDIT_DECREASE_LINE_INDENT
+END
+
+IDR_DEBUG TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_DEBUG_START_RUN
+    SEPARATOR
+    BUTTON      ID_DEBUG_START_DEBUG
+    BUTTON      ID_DEBUG_STOP
+    BUTTON      ID_DEBUG_PAUSE
+    BUTTON      ID_DEBUG_PAUSE_ON_PARSE
+    SEPARATOR
+    BUTTON      ID_DEBUG_STEPINTO
+    BUTTON      ID_DEBUG_STEPOVER
+    BUTTON      ID_DEBUG_TOGGLE_BREAKPOINT
+    BUTTON      ID_BREAKPOINTS_CLEAR_ALL
+END
+
+IDR_FULLSCREEN TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_VIEW_FULLSCREEN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File", MENUBARBREAK
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "New Document",                ID_FILE_NEW_DOC1
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "Save All",                    ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Open Project...",             ID_FILE_PROJECT_OPEN
+        MENUITEM "Save project",                ID_FILE_PROJECT_SAVE
+        MENUITEM "Close project",               ID_FILE_PROJECT_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Close All",                   ID_FILE_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent Files"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+            , GRAYED
+            MENUITEM SEPARATOR
+        END
+        POPUP "Recent Projects"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "Recent Project",              ID_FILE_MRU_PROJECT1
+            , GRAYED
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View", MENUBARBREAK
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&MDI Tabs",                   ID_VIEW_MDI_TABS
+        MENUITEM "Full Screen",                 ID_VIEW_FULLSCREEN
+    END
+    POPUP "Project", MENUBARBREAK
+    BEGIN
+        MENUITEM "Add &Rule...",                ID_PROJECT_ADD_RULE
+        MENUITEM "Add &Files to Project...",    ID_PROJECT_ADD_FILES
+        MENUITEM SEPARATOR
+        MENUITEM "&Unload Project",             ID_PROJECT_UNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Export rules to XBNF",        ID_PROJECT_EXPORT_TO_XBNF
+        MENUITEM SEPARATOR
+        MENUITEM "&Project Settings...",        ID_PROJECT_SETTINGS
+    END
+    POPUP "&Build", MENUBARBREAK
+    BEGIN
+        MENUITEM "&Build",                      ID_BUILD_BUILD_PROJECT
+        MENUITEM "&Clean",                      ID_BUILD_CLEAN
+        MENUITEM "Stop Build",                  ID_BUILD_STOP_BUILD
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild &All",                ID_DUMMY_REBUILD_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Go To  Next Error",           ID_BUILD_NEXT_ERROR
+        MENUITEM "Go To Previous Error",        ID_BUILD_PREV_ERROR
+    END
+    POPUP "&Debug", MENUBARBREAK
+    BEGIN
+        MENUITEM "Start Debug",                 ID_DEBUG_START_DEBUG
+        MENUITEM "Run",                         ID_DEBUG_START_RUN
+        MENUITEM "&Pause",                      ID_DEBUG_PAUSE
+        MENUITEM "Stop",                        ID_DEBUG_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Step Into",                   ID_DEBUG_STEPINTO
+        MENUITEM "Step Over",                   ID_DEBUG_STEPOVER
+        MENUITEM SEPARATOR
+        POPUP "Parsing", MENUBARBREAK
+        BEGIN
+            MENUITEM "Make Complete Report at Parse", 
+                                                    ID_PARSING_COMPLETE_REPORT
+
+            MENUITEM "Make Short Report at Parse ", ID_PARSING_SHORT_REPORT
+            MENUITEM "Report to File",              ID_PARSING_REPORT_TO_FILE
+
+            MENUITEM SEPARATOR
+            MENUITEM "Pause Debugging at Every Parser Message", 
+                                                    ID_DEBUG_PAUSE_ON_PARSE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Insert/Remove Breakpoint",    ID_DEBUG_TOGGLE_BREAKPOINT
+        MENUITEM "New Breakpoint...",           ID_DEBUG_NEW_BREAKPOINT
+        MENUITEM "Disable/Enable Breakpoint",   ID_DEBUG_DISABLE_BREAKPOINT
+        MENUITEM "Clear All Breakpoints",       ID_BREAKPOINTS_CLEAR_ALL
+    END
+    POPUP "&Tools", MENUBARBREAK
+    BEGIN
+        MENUITEM "Syntax Diagramms...",         ID_TOOLS_SYNTAX_DIAGRAMS
+        MENUITEM "View Library Contents...",    ID_TOOLS_VIEW_LIBRARIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Macro...",                   ID_TOOLS_MACRO
+        MENUITEM "<User defined tools>",        ID_TOOLS_ENTRY
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options...",                 ID_TOOLS_OPTIONS
+    END
+    POPUP "&Help", MENUBARBREAK
+    BEGIN
+        MENUITEM "&Keyboard Map...",            ID_HELP_KEYBOARDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Tip of the Day...",           ID_HELP_TIP_OF_THE_DAY
+        MENUITEM "&Help",                       ID_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_DOC_SOURCE MENU 
+BEGIN
+    POPUP "&File", MENUBARBREAK
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "New Document",                ID_FILE_NEW_DOC1
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save All",                    ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Open Project",                ID_FILE_PROJECT_OPEN
+        MENUITEM "Save project",                ID_FILE_PROJECT_SAVE
+        MENUITEM "Close project",               ID_FILE_PROJECT_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Close All",                   ID_FILE_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent Files"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+            , GRAYED
+            MENUITEM SEPARATOR
+        END
+        POPUP "Recent Projects"
+        BEGIN
+            MENUITEM SEPARATOR
+            MENUITEM "Recent Project",              ID_FILE_MRU_PROJECT1
+            , GRAYED
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit", MENUBARBREAK
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo",                       ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll",                 ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        POPUP "Ad&vanced"
+        BEGIN
+            MENUITEM "View &Whitespaces",           ID_VIEW_WHITESPACE
+            MENUITEM "View &Indent Guides",         ID_VIEW_INDENTGUIDES
+            MENUITEM "View &Fold Margin",           ID_VIEW_FOLD_MARGIN
+            MENUITEM SEPARATOR
+            MENUITEM "F&ormat Selection",           ID_EDIT_AUTOFORMAT
+            MENUITEM "&Tabify Selection",           ID_EDIT_TABIFYSELECTION
+            MENUITEM "U&ntabify Selection",         ID_EDIT_UNTABIFYSELECTION
+
+            MENUITEM "Make Selection &Uppercase",   ID_EDIT_UPPERCASE
+            MENUITEM "Make Selection &Lowercase",   ID_EDIT_LOWERCASE
+            MENUITEM "Inrease Line Indent",         ID_EDIT_INCREASE_LINE_INDENT
+
+            MENUITEM "&Decrease Line Indent",       ID_EDIT_DECREASE_LINE_INDENT
+
+        END
+        POPUP "&Zooming"
+        BEGIN
+            MENUITEM "Zoom &In",                    ID_EDIT_ZOOM_IN
+            MENUITEM "Zoom &Out",                   ID_EDIT_ZOOM_OUT
+            MENUITEM "&Reset Zoom",                 ID_EDIT_ZOOM_RESET
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Fold/Unfold Current",         ID_EDIT_FOLD_CUR
+        MENUITEM "Fold/Unfold All",             ID_EDIT_FOLD_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Complete &Word",              ID_EDIT_COMPLETE_WORD
+        MENUITEM "Synchroni&ze Explorer",       ID_EDIT_SYNC_EXPLORER
+    END
+    POPUP "&Search", MENUBARBREAK
+    BEGIN
+        MENUITEM "&Find...",                    ID_EDIT_FIND
+        MENUITEM "Find &Next",                  ID_EDIT_FIND_NEXT
+        MENUITEM "&Replace...",                 ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "F&ind in Files",              ID_EDIT_FIND_IN_FILES
+        MENUITEM SEPARATOR
+        MENUITEM "&Goto line...",               ID_EDIT_GOTOLINE
+        MENUITEM SEPARATOR
+        MENUITEM "Toggle Bookmar&k",            ID_EDIT_TOGGLE_BOOKMARK
+        MENUITEM "&Clear All Bookmarks",        ID_EDIT_CLEAR_BOOKMARKS
+        MENUITEM "Next Book&mark",              ID_EDIT_NEXT_BOOKMARK
+        MENUITEM "Pre&vious Bookmark",          ID_EDIT_PREV_BOOKMARK
+        MENUITEM SEPARATOR
+        MENUITEM "&Find Declaration",           ID_EDIT_FIND_DECLARATION
+    END
+    POPUP "&View", MENUBARBREAK
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&MDI Tabs",                   ID_VIEW_MDI_TABS
+        MENUITEM "Full Screen",                 ID_VIEW_FULLSCREEN
+    END
+    POPUP "Project", MENUBARBREAK
+    BEGIN
+        MENUITEM "Add &Rule...",                ID_PROJECT_ADD_RULE
+        MENUITEM "Add &Files to Project...",    ID_PROJECT_ADD_FILES
+        MENUITEM "Add Code Template...",        ID_PROJECT_ADD_CODE_TEMPLATE
+        MENUITEM SEPARATOR
+        MENUITEM "&Unload Project",             ID_PROJECT_UNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Export rules to XBNF",        ID_PROJECT_EXPORT_TO_XBNF
+        MENUITEM SEPARATOR
+        MENUITEM "&Project Settings...",        ID_PROJECT_SETTINGS
+    END
+    POPUP "&Build", MENUBARBREAK
+    BEGIN
+        MENUITEM "&Build",                      ID_BUILD_BUILD_PROJECT
+        MENUITEM "&Clean",                      ID_BUILD_CLEAN
+        MENUITEM "Stop Build",                  ID_BUILD_STOP_BUILD
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild &All",                ID_DUMMY_REBUILD_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Go To  Next Error",           ID_BUILD_NEXT_ERROR
+        MENUITEM "Go To Previous Error",        ID_BUILD_PREV_ERROR
+    END
+    POPUP "&Debug", MENUBARBREAK
+    BEGIN
+        MENUITEM "Start Debug",                 ID_DEBUG_START_DEBUG
+        MENUITEM "Run",                         ID_DEBUG_START_RUN
+        MENUITEM "&Pause",                      ID_DEBUG_PAUSE
+        MENUITEM "Stop",                        ID_DEBUG_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Step Into",                   ID_DEBUG_STEPINTO
+        MENUITEM "Step Over",                   ID_DEBUG_STEPOVER
+        MENUITEM SEPARATOR
+        POPUP "Parsing", MENUBARBREAK
+        BEGIN
+            MENUITEM "Make Complete Report at Parse", 
+                                                    ID_PARSING_COMPLETE_REPORT
+
+            MENUITEM "Make Short Report at Parse",  ID_PARSING_SHORT_REPORT
+            MENUITEM "Report to File",              ID_PARSING_REPORT_TO_FILE
+
+            MENUITEM SEPARATOR
+            MENUITEM "Pause Debugging at Every Parser Message", 
+                                                    ID_DEBUG_PAUSE_ON_PARSE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Clear All Breakpoints",       ID_BREAKPOINTS_CLEAR_ALL
+        MENUITEM "Insert/Remove Breakpoint",    ID_DEBUG_TOGGLE_BREAKPOINT
+        MENUITEM "New Breakpoint...",           ID_DEBUG_NEW_BREAKPOINT
+        MENUITEM "Disable/Enable Breakpoint",   ID_DEBUG_DISABLE_BREAKPOINT
+    END
+    POPUP "&Tools", MENUBARBREAK
+    BEGIN
+        MENUITEM "Syntax Diagramms...",         ID_TOOLS_SYNTAX_DIAGRAMS
+        MENUITEM "View Library Contents...",    ID_TOOLS_VIEW_LIBRARIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Macro...",                   ID_TOOLS_MACRO
+        MENUITEM "<User defined tools>",        ID_TOOLS_ENTRY
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options...",                 ID_TOOLS_OPTIONS
+    END
+    POPUP "&Window", MENUBARBREAK
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help", MENUBARBREAK
+    BEGIN
+        MENUITEM "&Keyboard Map...",            ID_HELP_KEYBOARDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Tip of the Day...",           ID_HELP_TIP_OF_THE_DAY
+        MENUITEM "Help",                        ID_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_DOC_SOURCE_MARGIN MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Fold/Unfold Current",         ID_EDIT_FOLD_CUR
+        MENUITEM "Fold/Unfold All",             ID_EDIT_FOLD_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "View &Fold Margin",           ID_VIEW_FOLD_MARGIN
+    END
+END
+
+IDR_POPUP_DOC_SOURCE MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo",                       ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll",                 ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "View &Whitespaces",           ID_VIEW_WHITESPACE
+        MENUITEM "View Indent Guides",          ID_VIEW_INDENTGUIDES
+        MENUITEM SEPARATOR
+        MENUITEM "Insert/Remove Breakpoint",    ID_DEBUG_TOGGLE_BREAKPOINT
+        MENUITEM "New Breakpoint...",           ID_DEBUG_NEW_BREAKPOINT
+        MENUITEM "Disable/Enable Breakpoint",   ID_DEBUG_DISABLE_BREAKPOINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Find Declaration",           ID_EDIT_FIND_DECLARATION
+        MENUITEM "Complete &Word",              ID_EDIT_COMPLETE_WORD
+        MENUITEM "Synchroni&ze Explorer",       ID_EDIT_SYNC_EXPLORER
+    END
+END
+
+IDR_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+    END
+END
+
+IDR_POPUP_TOOLBAR MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Standard",                   ID_VIEW_TOOLBAR
+        MENUITEM "Edit",                        ID_VIEW_EDIT_TOOLBAR
+        MENUITEM "Debug",                       ID_VIEW_DEBUG_TOOLBAR
+        MENUITEM "&Build",                      ID_VIEW_BUILD_TOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&MDI Tabs",                   ID_VIEW_MDI_TABS
+        MENUITEM "&Information",                ID_VIEW_INFOBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Workspace",                  ID_VIEW_WORKSPACE
+        MENUITEM "&Output",                     ID_VIEW_OUTPUT
+        MENUITEM "W&atch",                      ID_VIEW_WATCH
+        MENUITEM "&Screen",                     ID_VIEW_SCREEN
+        MENUITEM "Breakpoints",                 ID_VIEW_BREAKPOINTS
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR1
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR2
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR3
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR4
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR5
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR6
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR7
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR8
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR9
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR10
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+    END
+END
+
+IDR_UNDO MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "<dummy>",                     ID_EDIT_UNDO_DUMMY
+    END
+END
+
+IDR_POPUP_CLW_RULE MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Go to Definition",           ID_CLW_DEFINITION
+        MENUITEM "Add &Rule",                   ID_PROJECT_ADD_RULE
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PROPERTIES
+    END
+END
+
+IDR_POPUP_OUTPUT MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Clear",                      ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Go To Error/Tag",            ID_OUTPUT_GOTO_ERROR
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide",                       ID_VIEW_OUTPUT
+    END
+END
+
+IDR_MENU_ARGS MENU 
+BEGIN
+    POPUP "_DUMMY_"
+    BEGIN
+        MENUITEM "Item 1",                      ID_MENU_ITEM1
+        MENUITEM "Item 2",                      ID_MENU_ITEM2
+        MENUITEM "Item 3",                      ID_MENU_ITEM3
+    END
+END
+
+IDR_POPUP_MAIN_AREA MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Standard",                   ID_VIEW_TOOLBAR
+        MENUITEM "&Build",                      ID_VIEW_BUILD_TOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Workspace",                  ID_VIEW_WORKSPACE
+        MENUITEM "&Output",                     ID_VIEW_OUTPUT
+        MENUITEM "W&atch",                      ID_VIEW_WATCH
+        MENUITEM SEPARATOR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Document Tabs",               ID_VIEW_DOCUMENT_TAB
+        MENUITEM "Full Screen",                 ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+    END
+END
+
+IDR_MENU_DIRS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Dir &1",                      ID_MENU_DIR1
+        MENUITEM "Dir &2",                      ID_MENU_DIR2
+        MENUITEM "Dir &3",                      ID_MENU_DIR3
+    END
+END
+
+IDR_POPUP_MDI_TABS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Close Document",             ID_MDITABS_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "MDI Tab &Icons",              ID_MDITABS_ICONS
+        MENUITEM SEPARATOR
+        MENUITEM "Tabs on &Top",                ID_MDITABS_TOP
+        MENUITEM "Tabs at &Bottom",             ID_MDITABS_BOTTOM
+        MENUITEM SEPARATOR
+        MENUITEM "&MDI Tabs",                   ID_VIEW_MDI_TABS
+    END
+END
+
+IDR_POPUP_FLW_SOURCE MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Remove from Project",         ID_SOURCE_FILE_REMOVE
+        MENUITEM "Compile",                     ID_SOURCE_FILE_COMPILE
+        MENUITEM SEPARATOR
+        MENUITEM "Physically Delete",           ID_SOURCE_FILE_PHYS_DELETE
+        MENUITEM "Recreate ",                   ID_SOURCE_FILE_RECREATE
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "Properties",                  ID_PROPERTIES
+    END
+END
+
+IDR_POPUP_FLW_PROJECT MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Build",                      ID_BUILD_BUILD_PROJECT
+        MENUITEM "Set as &Active Project",      ID_PROJECT_SET_ACTIVE
+        MENUITEM "&Unload Project",             ID_PROJECT_UNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "Add &New File",               ID_PROJECT_NEW_FILE
+        MENUITEM "Add &Existing Files",         ID_PROJECT_ADD_FILES
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PROPERTIES
+    END
+END
+
+IDR_POPUP_CLW_VARIANT MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Go to Definition",           ID_CLW_DEFINITION
+        MENUITEM "Add &Rule",                   ID_PROJECT_ADD_RULE
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PROPERTIES
+    END
+END
+
+IDR_POPUP_CLW_PROJECT MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Add &Rule",                   ID_PROJECT_ADD_RULE
+        POPUP "Tools"
+        BEGIN
+            MENUITEM "Export rules to XBNF",        ID_PROJECT_EXPORT_TO_XBNF
+
+            MENUITEM "Build Syntax Diagram",        ID_PROJECT_BUILD_SYNTAX_DIAGRAM
+
+            MENUITEM "Build Syntax Tree",           ID_PROJECT_BUILD_SYNTAX_TREE
+
+            MENUITEM "Import Rules",                ID_TOOLS_IMPORT_GRAMMAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Set as &Active Project",      ID_PROJECT_SET_ACTIVE
+        MENUITEM "&Unload Project",             ID_PROJECT_UNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Build",                      ID_BUILD_BUILD_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "&New Folder",                 ID_CLW_NEW_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PROPERTIES
+    END
+END
+
+IDR_POPUP_OUTPUT_SCREEN MENU 
+BEGIN
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Cop&y",                       ID_EDIT_COPY
+        MENUITEM "Cl&ear",                      ID_OUTPUT_OPTIONS_CLEAR
+        MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save to File",               ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "OEM - ANSI Conversion ",      ID_OUTPUT_OPTIONS_OEM
+        MENUITEM "Alternative EOL Conversion",  ID_OUTPUT_OPTIONS_ALTCONVERSION
+
+        MENUITEM "Close by Touch",              ID_OUTPUT_OPTIONS_AUTOCLOSE
+        MENUITEM "Clear Automatically",         ID_OUTPUT_OPTIONS_AUTOCLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Size to Content ",            ID_OUTPUT_OPTIONS_SIZETOCONTENT
+
+        POPUP "Color"
+        BEGIN
+            MENUITEM "Text Color",                  ID_OUTPUT_OPTIONS_TEXTCOLOR
+
+            MENUITEM "Background Color",            ID_OUTPUT_OPTIONS_BACKCOLOR
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Independent Window",          ID_INDEPENDENT_BAR_SCREEN
+        , CHECKED
+        MENUITEM "&Hide",                       ID_VIEW_SCREEN
+    END
+END
+
+IDR_POPUP_CLW_BASE MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_FLW_BASE MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_BREAKPOINTS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "New Breakpoint",              ID_DEBUG_NEW_BREAKPOINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     ID_BREAKPOINTS_DELETE
+        MENUITEM "Disable/Enable",              ID_BREAKPOINTS_DISABLE
+        MENUITEM "&Goto",                       ID_BREAKPOINTS_GOTO
+        MENUITEM SEPARATOR
+        MENUITEM "Clear All Breakpopints",      ID_BREAKPOINTS_CLEAR_ALL
+        MENUITEM "Disable All Breakpoints",     ID_BREAKPOINTS_DISABLE_ALL
+        MENUITEM "Enable All Breakpoints",      ID_BREAKPOINTS_ENABLE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Independent Window",          ID_INDEPENDENT_BAR_BREAKPOINTS
+        , CHECKED
+        MENUITEM "&Hide",                       ID_VIEW_BREAKPOINTS
+    END
+END
+
+IDR_POPUP_CLW_RULES MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Add &Rule",                   ID_PROJECT_ADD_RULE
+        POPUP "Tools"
+        BEGIN
+            MENUITEM "Export rules to XBNF",        ID_PROJECT_EXPORT_TO_XBNF
+
+            MENUITEM "Build Syntax Diagram",        ID_PROJECT_BUILD_SYNTAX_DIAGRAM
+
+            MENUITEM "Build Syntax Tree",           ID_PROJECT_BUILD_SYNTAX_TREE
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&New Folder",                 ID_CLW_NEW_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_CLW_RULES_RECENTLY MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Clear list",                  ID_CLW_CLEAR_RECENTLY_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "&New Folder",                 ID_CLW_NEW_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_CLW_USER_FOLDER MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&New Folder",                 ID_CLW_NEW_FOLDER
+        MENUITEM "Move To Top",                 ID_CLW_MOVETOTOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename",                     ID_CLW_RENAME
+        MENUITEM "&Delete",                     ID_CLW_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_FLW_SOURCES MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Add &New File",               ID_PROJECT_NEW_FILE
+        MENUITEM "Add &Existing Files",         ID_PROJECT_ADD_FILES
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_CLW_FUNCS MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&New Folder",                 ID_CLW_NEW_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+IDR_POPUP_CLW_STRUCTS MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&New Folder",                 ID_CLW_NEW_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by Name",                ID_CLW_SORT
+        MENUITEM "&Hide Bar",                   ID_VIEW_WORKSPACE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F7,          ID_BUILD_BUILD_PROJECT, VIRTKEY, NOINVERT
+    VK_F7,          ID_BUILD_COMPILE_SOURCE, VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          ID_BUILD_NEXT_ERROR,    VIRTKEY, NOINVERT
+    VK_F4,          ID_BUILD_PREV_ERROR,    VIRTKEY, SHIFT, NOINVERT
+    "B",            ID_DEBUG_NEW_BREAKPOINT, VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          ID_DEBUG_PAUSE_ON_PARSE, VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_F5,          ID_DEBUG_START_DEBUG,   VIRTKEY, NOINVERT
+    VK_F5,          ID_DEBUG_START_RUN,     VIRTKEY, CONTROL, NOINVERT
+    VK_F11,         ID_DEBUG_STEPINTO,      VIRTKEY, NOINVERT
+    VK_F10,         ID_DEBUG_STEPOVER,      VIRTKEY, NOINVERT
+    VK_F5,          ID_DEBUG_STOP,          VIRTKEY, SHIFT, NOINVERT
+    VK_F9,          ID_DEBUG_TOGGLE_BREAKPOINT, VIRTKEY, NOINVERT
+    VK_F8,          ID_EDIT_AUTOFORMAT,     VIRTKEY, ALT, NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_SPACE,       ID_EDIT_COMPLETE_WORD,  VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_4,       ID_EDIT_DECREASE_LINE_INDENT, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F12,         ID_EDIT_FIND_DECLARATION, VIRTKEY, NOINVERT
+    "F",            ID_EDIT_FIND_IN_FILES,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F3,          ID_EDIT_FIND_NEXT,      VIRTKEY, NOINVERT
+    VK_DOWN,        ID_EDIT_FOLD_ALL,       VIRTKEY, SHIFT, CONTROL, ALT, 
+                                                    NOINVERT
+    VK_DOWN,        ID_EDIT_FOLD_CUR,       VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "G",            ID_EDIT_GOTOLINE,       VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_6,       ID_EDIT_INCREASE_LINE_INDENT, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "U",            ID_EDIT_LOWERCASE,      VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_NEXT_BOOKMARK,  VIRTKEY, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_PREV_BOOKMARK,  VIRTKEY, SHIFT, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          ID_EDIT_TABIFYSELECTION, VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          ID_EDIT_UNTABIFYSELECTION, VIRTKEY, SHIFT, CONTROL, ALT, 
+                                                    NOINVERT
+    "U",            ID_EDIT_UPPERCASE,      VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_ADD,         ID_EDIT_ZOOM_IN,        VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_EDIT_ZOOM_OUT,       VIRTKEY, CONTROL, NOINVERT
+    VK_DIVIDE,      ID_EDIT_ZOOM_RESET,     VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_ALL,       VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F7,          ID_PROJECT_SETTINGS,    VIRTKEY, ALT, NOINVERT
+    "B",            ID_VIEW_BREAKPOINTS,    VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_RETURN,      ID_VIEW_FULLSCREEN,     VIRTKEY, SHIFT, ALT, NOINVERT
+    "9",            ID_VIEW_INDENTGUIDES,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "U",            ID_VIEW_OUTPUT,         VIRTKEY, CONTROL, ALT, NOINVERT
+    "E",            ID_VIEW_SCREEN,         VIRTKEY, CONTROL, ALT, NOINVERT
+    "8",            ID_VIEW_WHITESPACE,     VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "W",            ID_VIEW_WORKSPACE,      VIRTKEY, CONTROL, ALT, NOINVERT
+    "Z",            ID_EDIT_REDO,           VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+END
+
+IDR_ADD_RULE ACCELERATORS 
+BEGIN
+    "A",            IDC_ADD_TO_VARIANT,     VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      IDC_DELETE_TERMS,       VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        IDC_MOVE_TERM_DOWN,     VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          IDC_MOVE_TERM_UP,       VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      IDC_NEW_TERM,           VIRTKEY, NOINVERT
+    VK_F2,          IDC_EDIT_ITEM,          VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MARGIN              CURSOR                  "res\\margin.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_MTDEV               REGISTRY                "MTDev.rgs"
+IDR_APPLICATION         REGISTRY                "Application.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// F_MAIN_TMPL
+//
+
+IDR_F_MAIN_TMPL1        F_MAIN_TMPL             "res\\main1.tmpl"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJECT_WAS_CHANGED_s 
+                            "Project ""%s"" was changed. Do you want to save changes?"
+    IDS_PROJECT_WZD_DEF_TITLE "Empty project (no grammatic files incuded)"
+    IDS_PROJECT_WZD_SIMPLE_TITLE 
+                            "Simple project (one empty grammatic file included)"
+    IDS_CANT_PERFORM_OPERATION_s 
+                            "Cannot perform operation because the next error has occured: ""%s"""
+    IDS_FILE_IS_READ_ONLY_s "The file %s cannot be saved because it is write-protected. Do you want to remove the write-protection and overwrite the file in its current location?\n\nPress ""No"" to open ""Save As"" dialog."
+    IDS_RUN_PROJECT_NO_MODULE_s 
+                            """%s""\n\nThis file does not exist. Do you want to build  it?"
+    IDS_RUN_PROJECT_WAS_CHANGED_s 
+                            "Project ""%s"" was changed. Would you like to build it?"
+    IDS_SOURCE_WAS_CHANGED_s 
+                            "Source file ""%s"" was changed. Do you want to save changes?"
+    IDS_STRING_NOT_FOUND_FMT "Cannot find the string ""%s"""
+    IDS_TOD_DID_YOU_KNOW    "Did you know..."
+    IDS_TOD_FILENAME        "tipse.txt"
+    IDS_TOD_FILE_ABSENT     "Tips file does not exist in the prescribed directory"
+    IDS_TOD_FILE_CORRUPT    "Trouble reading the tips file"
+    IDS_CANT_REMOVE_WRITE_PROTECTION_s 
+                            "Cannot remove write protection from file ""%s""."
+    IDS_AUTOSAVE_COMPLETED  "Autosave completed"
+    IDS_FILE_SAVING_s       "Saving %s..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDIT_TOOLBAR        "Edit"
+    IDS_FILE_ALREADY_EXISTS_s "File ""%s"" already exists"
+    IDS_FILE_CHANGED_OUTSIDE_s 
+                            "%s\n\n\nThe file has been modified outside of the source editor. Do you want to reload it?"
+    IDS_FILE_CORRUPTED_s    "File ""%s"" looks like corrupted"
+    IDS_FILE_TREE_OTHER_DOC_FOLDER "Other Documents"
+    IDS_FILE_TREE_SOURCE_FOLDER "Grammatic Source Files"
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_NEW_FOLDER_d        "New Folder %d"
+    IDS_NO_MODULE_NAME      "Error: a name of module is absent. Please enter the name"
+    IDS_NO_RULE_NAME        "Error: a name of rule is absent. Please enter the name"
+    IDS_NO_STATISTIC_FILE   "Cannot open statistic file. Run translation again."
+    IDS_OBJECT_HAS_NOT_PROPS "This object has no properties"
+    IDS_PARSE_REPORT_TO_FILE_s 
+                            "Parse report assigned to file %s. Click twice to open it when the translation is finished. \r\nPlease wait for a while..."
+    IDS_PARSE_REPORT_WILL_TO_FILE_s 
+                            "Parse report will be assigned to file %s."
+    IDS_PROJECT_ADD_FILES   "Add files to project..."
+    IDS_PROJECT_FILE_BAD_s  "File ""%s"" has not valid project file format. It cannot be loaded."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AUTOMATION_SERVER_CLOSING 
+                            "The program is running as automation server. Its termination will make all clients' references incorrect and may cause a serious consequences. Would you really like to close program?"
+    IDS_BUILD_TOOLBAR       "Build"
+    IDS_CANT_CREATE_DIR_s   "Cannot create directory ""%s""."
+    IDS_CANT_CREATE_FILE_s  "Cannot create file ""%s"""
+    IDS_CANT_DELETE_FILE_s  "The file ""%s"" can not be removed. Probably, he is open by other application"
+    IDS_CANT_EXECUTE_ss     "Cannot execute module ""%s"". Cause: %s"
+    IDS_CANT_FIND_FILE_s    "Cannot find file ""%s"""
+    IDS_CANT_FIND_GENERATOR_s 
+                            "Cannot find the language code generator %s. Do you want to continue the process without it?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CANT_LOAD_EDITOR    "Cannot load editor library. All editor functions will be disabled"
+    IDS_CANT_LOAD_INSTALLED_FILE_s 
+                            "Cannot load file ""%s"", which must be installed by setup program. Please reinstall the program."
+    IDS_CANT_READ_FILE_s    "Cannot read file ""%s"""
+    IDS_CANT_WRITE_TO_FILE_s "Cannot write to file ""%s"""
+    IDS_CLOSE_APP_BUILD_IN_PROGRESS 
+                            "The program cannot be closed while a build is in progress. Do you want to stop the build?"
+    IDS_CLOSE_APP_DEBUG_IN_PROGRESS 
+                            "The program cannot be closed while a debug is in progress. Do you want to stop the debug?"
+    IDS_CLOSE_PROJECT_BUILD_IN_PROGRESS 
+                            "The project cannot be closed while build is in progress. Do you want to stop build?"
+    IDS_CLOSE_PROJECT_DEBUG_IN_PROGRESS 
+                            "The project cannot be closed while debug/run is in progress. Do you want to stop debug?"
+    IDS_CLW_FUNCS_TITLE     "Functions"
+    IDS_CLW_RECENTLY_TITLE  "Recently"
+    IDS_CLW_RULES_TITLE     "Rules"
+    IDS_CLW_STRUCTS_TITLE   "Structs"
+    IDS_CUSTOMIZE           "Customize..."
+    IDS_DEBUG_TOOLBAR       "Debug"
+    IDS_DO_YOU_WANT_DELETE_FILE_s 
+                            "Do you really want to remove a file ""%s""?"
+    IDS_DUMMY_UNDO_ACTION   "Undoes this action\nUndo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HELP_HELP            "Displays help\nHelp"
+    IDR_MAINFRAME           "MultiTranslator"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TEAR_OFF23           "Dummy"
+    ID_TEAR_OFF24           "Dummy"
+    ID_TEAR_OFF25           "Dummy"
+    ID_TEAR_OFF26           "Dummy"
+    ID_TEAR_OFF27           "Dummy"
+    ID_TEAR_OFF28           "Dummy"
+    ID_TEAR_OFF29           "Dummy"
+    ID_EDIT_FIND_COMBO      "Find the text\nFind"
+    ID_TOOLS_OPTIONS        "Opens program settings dialog"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_DOC_PROJECT         "Grammatic Project\nNoname\nGrammatic project\nGrammatic project file(*.pjt)\n.pjt\nMultiTranslator.ProjectView.Document\nMultiTranslator project files"
+    IDR_DOC_SOURCE          "Source File\nNoname\nSource File\nSource files(*.grm)\n.grm\nMultiTranslator.SourceView.Document\nMultiTranslator source files"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "MultiTranslator"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_PROJECT_SAVE    "Save the active project\nSave Project"
+    ID_FILE_SAVE_ALL        "Save all modified files\nSave All"
+    ID_HELP_KEYBOARDMAP     "Displays all keyboard commands\nKeyboard Map"
+    ID_HELP_TIP_OF_THE_DAY  "Displays a Tip of the Day\nTip of the Day..."
+    ID_INDEPENDENT_BAR_BREAKPOINTS "Set the window as dockable\nDockable"
+    ID_INDEPENDENT_BAR_SCREEN "Set the window as dockable\nDockable"
+    ID_INDICATOR_POS        "Line 1000, Pos 1000"
+    ID_MDITABS_BOTTOM       "Show MDI Tabs at bottom\nBottom"
+    ID_MDITABS_CLOSE        "Close clicked document\nClose Document"
+    ID_MDITABS_ICONS        "Toggle MDI Tab Icons\nMDI Icons"
+    ID_MDITABS_TOP          "Show MDI Tabs on top\nTop"
+    ID_MENU_DIR1            "$(Dir1)"
+    ID_MENU_DIR2            "$(Dir2)"
+    ID_MENU_DIR3            "$(Dir3)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP                 "Diplays help\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_PROJECT_CLOSE   "Close the active project\nClose Project"
+    ID_FILE_PROJECT_OPEN    "Open an existing project\nOpen project"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OUTPUT_OPTIONS_BACKCOLOR 
+                            "Set new background color in the output window"
+    ID_OUTPUT_OPTIONS_CLEAR "Clear contents of output window"
+    ID_OUTPUT_OPTIONS_SIZETOCONTENT 
+                            "Resize output window to optimal dimensions"
+    ID_OUTPUT_OPTIONS_TEXTCOLOR "Set new text color in the output window"
+    ID_PARSING_COMPLETE_REPORT 
+                            "To make the report at translation (Parse Debug)\nTo make the report at translation (Parse Debug)"
+    ID_PARSING_REPORT_TO_FILE 
+                            "To make the report to file\nTo make the report to file"
+    ID_PARSING_SHORT_REPORT "To make the short report at translation\nTo make the short report at translation"
+    ID_POPUP_PROJECT_SET_ACTIVE "Set as Active Project"
+    ID_PROJECT_ADD_CODE_TEMPLATE 
+                            "Adds a specified block of code, that can describe some common expressions"
+    ID_PROJECT_ADD_FILES    "Add files to project\nAdd Files to Project"
+    ID_PROJECT_ADD_RULE     "Add rule to selected project\nAdd Rule"
+    ID_PROJECT_ADD_TO_KNOWLEDGEBASE 
+                            "Adds the rules of translation to the knowledge base"
+    ID_PROJECT_BUILD_SYNTAX_DIAGRAM "Builds syntax diagram"
+    ID_PROJECT_BUILD_SYNTAX_TREE "Builds syntax tree"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PROJECT_EXPORT_TO_XBNF 
+                            "Exports all typed rules to text file in the XBNF representation"
+    ID_TOOLS_IMPORT_GRAMMAR "Import Grammars"
+    ID_PROJECT_NEW_FILE     "Adds new source document into the project"
+    ID_PROJECT_SETTINGS     "Project Settings\nProject Settings"
+    ID_PROJECT_SET_ACTIVE   "Set selected project as active project\nSet as Active Project"
+    ID_PROJECT_UNLOAD       "Unload selected project\nUnload Project"
+    ID_PROPERTIES           "Edits the current selection properties\nProperties"
+    ID_RESOURCE_OPEN        "Open the selected resource for editing\nOpen"
+    ID_RESOURCE_OPEN_BINARY "Open the selected resource for binary editing\nOpen Binary"
+    ID_SOURCE_FILE_COMPILE  "Compile selected file\nCompile"
+    ID_SOURCE_FILE_PHYS_DELETE 
+                            "Physically delete selected file\nPhysically delete"
+    ID_SOURCE_FILE_RECREATE "Recreate selected file\nRecreate file"
+    ID_SOURCE_FILE_REMOVE   "Remove selected item from project\nRemove from project"
+    ID_TOOLS_ENTRY          "<User defined tools>\n<User defined tools>"
+    ID_TOOLS_GRAMMATICAL_INFERENCE "Runs Grammatical Inference Wizard"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_CUSTOMIZE       "Customize toolbars and menus.\nCustomize"
+    ID_VIEW_FOLD_MARGIN     "View Fold Margin\nView Fold Margin"
+    ID_VIEW_FULLSCREEN      "Toggles Full Screen Mode On and Off\nFull Screen"
+    ID_VIEW_INDENTGUIDES    "View Indent Guides\nView Indent Guides"
+    ID_VIEW_INFOBAR         "Show or hide the information bar\nToggle Information"
+    ID_VIEW_MDI_TABS        "Toggle MDI Tabs\nShow/Hide Tabs"
+    ID_VIEW_OUTPUT          "Show or hide the output\nOutput"
+    ID_VIEW_SCREEN          "Show or hide the output screen\nScreen"
+    ID_VIEW_USER_TOOLBAR1   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR2   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR3   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR4   "Show or hide the user toolbar\nToggle User ToolBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR5   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR6   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR7   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR8   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR9   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR10  "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_WATCH           "Show or hide the watch\nToggle Watch"
+    ID_VIEW_WHITESPACE      "Shows or hides tab characters\nShow Whitespaces"
+    ID_VIEW_WORKSPACE       "Show or hide the workspace\nWorkSpace"
+    ID_WINDOW_MANAGER       "Manages the currently open windows\nWindow List"
+    ID_TEAR_OFF1            "Dummy"
+    ID_TEAR_OFF2            "Dummy"
+    ID_TEAR_OFF3            "Dummy"
+    ID_TEAR_OFF4            "Dummy"
+    ID_TEAR_OFF5            "Dummy"
+    ID_TEAR_OFF6            "Dummy"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TEAR_OFF7            "Dummy"
+    ID_TEAR_OFF8            "Dummy"
+    ID_TEAR_OFF9            "Dummy"
+    ID_TEAR_OFF10           "Dummy"
+    ID_TEAR_OFF11           "Dummy"
+    ID_TEAR_OFF12           "Dummy"
+    ID_TEAR_OFF13           "Dummy"
+    ID_TEAR_OFF14           "Dummy"
+    ID_TEAR_OFF15           "Dummy"
+    ID_TEAR_OFF16           "Dummy"
+    ID_TEAR_OFF17           "Dummy"
+    ID_TEAR_OFF18           "Dummy"
+    ID_TEAR_OFF19           "Dummy"
+    ID_TEAR_OFF20           "Dummy"
+    ID_TEAR_OFF21           "Dummy"
+    ID_TEAR_OFF22           "Dummy"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_NEXT_BOOKMARK   "Searches next bookmark in the text\nNext Book&mark"
+    ID_EDIT_PREV_BOOKMARK   "Searches previous bookmark in the text\nPrevious Bookmark"
+    ID_EDIT_SYNC_EXPLORER   "Synchronizes current item in the editor with the explorer tree"
+    ID_EDIT_TABIFYSELECTION "Replaces spaces with tabs in the selection\nTabify Selection"
+    ID_EDIT_TOGGLE_BOOKMARK "Toggle bookmark on the current line\nToggle Bookmark"
+    ID_EDIT_UNFOLD_ALL      "Unfold All"
+    ID_EDIT_UNFOLD_CUR      "Unfold Current"
+    ID_EDIT_UNTABIFYSELECTION 
+                            "Replaces tabs with spaces in the selection\nUntabify Selection"
+    ID_EDIT_UPPERCASE       "Makes the selection all uppercase\nMake Selection Uppercase"
+    ID_EDIT_ZOOM_IN         "Zoom In"
+    ID_EDIT_ZOOM_OUT        "Zoom Out"
+    ID_EDIT_ZOOM_RESET      "Reset zoom\nReset Zoom"
+    ID_FILE_CLOSE_ALL       "Close all opened documents\nClose All"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DUMMY_REBUILD_ALL    "Rebuilds active project\nRebuild All"
+    ID_DUMMY_STOP_BUILD     "Stop the build\nStop Build"
+    ID_EDIT_AUTOFORMAT      "Format the selection\nFormat Selection"
+    ID_EDIT_CLEAR_BOOKMARKS "Clear all bookmarks placed in the text\nClear All Bookmarks"
+    ID_EDIT_COMPLETE_WORD   "Completes current word"
+    ID_EDIT_DECREASE_LINE_INDENT "Decreases line indent\nDecrease Line Indent"
+    ID_EDIT_FIND_DECLARATION 
+                            "Displays the definition of the selected item\nDefinition"
+    ID_EDIT_FIND_IN_FILES   "Finds specific text in files\nFind in Files"
+    ID_EDIT_FIND_NEXT       "Search again with specified parameters\nSearch again"
+    ID_EDIT_FOLD_ALL        "Fold All"
+    ID_EDIT_FOLD_CUR        "Fold Current"
+    ID_EDIT_GOTOLINE        "Go to the specified line\nGo to line"
+    ID_EDIT_INCREASE_LINE_INDENT "Inreases line indent\nInrease Line Indent"
+    ID_EDIT_LOWERCASE       "Makes the selection all lowercase\nMake Selection Lowercase"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BREAKPOINTS_CLEAR_ALL "Clear all breakpopints\nClear All Breakpopints"
+    ID_BREAKPOINTS_DELETE   "Deletes the breakpoint\nDelete Breakpoint"
+    ID_BREAKPOINTS_DISABLE  "Disables or enables the breakpoint\nDisable/Enable Breakpoint"
+    ID_BREAKPOINTS_DISABLE_ALL 
+                            "Disable all breakpoint\nDisable All Breakpoints"
+    ID_BREAKPOINTS_ENABLE_ALL "Enable all breakpoint\nEnable All Breakpoints"
+    ID_BREAKPOINTS_GOTO     "Go to specified breakpoint\nGo to Breakpoint"
+    ID_BUILD_BUILD_PROJECT  "Build the project\nBuild"
+    ID_BUILD_CLEAN          "Deletes intermediate and output files\nClean"
+    ID_BUILD_COMPILE_SOURCE "Compile the file\nCompile"
+    ID_BUILD_NEXT_ERROR     "Goto next error\nGoto Next Error"
+    ID_BUILD_PREV_ERROR     "Goto next error\nGoto Previous Error"
+    ID_BUILD_STOP_BUILD     "Stop current build process\nStop build"
+    ID_CLW_DEFINITION       "Displayes the definition of the selected item\nDefinition"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_MACRO          "Create and edit macro\nMacro"
+    ID_TOOLS_STATISTIC      "Show statistic of using of variants in rules\nGrammatic Statistic and Optimization"
+    ID_TOOLS_SYNTAX_DIAGRAMS 
+                            "Shows graphical representation of grammatics\nSyntax Diagramms"
+    ID_TOOLS_VIEW_LIBRARIES "Shows all functions and variables of libraries "
+    ID_USER_TOOL1           "Activates user-defined tool"
+    ID_USER_TOOL10          "Activates user-defined tool"
+    ID_USER_TOOL2           "Activates user-defined tool"
+    ID_USER_TOOL3           "Activates user-defined tool"
+    ID_USER_TOOL4           "Activates user-defined tool"
+    ID_USER_TOOL5           "Activates user-defined tool"
+    ID_USER_TOOL6           "Activates user-defined tool"
+    ID_USER_TOOL7           "Activates user-defined tool"
+    ID_USER_TOOL8           "Activates user-defined tool"
+    ID_USER_TOOL9           "Activates user-defined tool"
+    ID_VIEW_BREAKPOINTS     "Show or hide the breakpoint window\nBreakpoints"
+    ID_VIEW_BUILD_TOOLBAR   "Show or hide the toolbar\nToggle ToolBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CLW_DELETE           "Deletes a specified item"
+    ID_CLW_NEW_FOLDER       "Creates new folder"
+    ID_CLW_RENAME           "Renames a specified item"
+    ID_CLW_SORT             "Sort by name\nSort"
+    ID_DEBUG_DISABLE_BREAKPOINT 
+                            "Disables or enables the breakpoint\nDisable/Enable Breakpoint"
+    ID_DEBUG_NEW_BREAKPOINT "Inserts or removes a breakpoint\nInsert/Remove Breakpoint"
+    ID_DEBUG_PAUSE          "Pause\nSuspends debugging  program"
+    ID_DEBUG_PAUSE_ON_PARSE "Stops debugging program at every parsing message\nPause at every parsing message"
+    ID_DEBUG_START_DEBUG    "Starts or continues the program\nStart or Continues the Program"
+    ID_DEBUG_START_RUN      "Execute the program\nGo"
+    ID_DEBUG_STEPINTO       "Step into\n Step Into"
+    ID_DEBUG_STEPOVER       "Step over\nStep Over"
+    ID_DEBUG_STOP           "Stop debug or run\nStop Debug or Run"
+    ID_DEBUG_TOGGLE_BREAKPOINT 
+                            "Inserts or removes breakpoint\nInsert/Remove Breakpoint"
+    ID_DUMMY_CLEAN          "Cleans the Project\nClean"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEW_ACCELERATOR      "Creates a new accelerator resource\nNew Accelerator"
+    ID_NEW_BITMAP           "Creates a new bitmap resource\nNew Bitmap"
+    ID_NEW_CURSOR           "Creates a new cursor resource\nNew Cursor"
+    ID_NEW_DIALOG           "Creates a new dialog resource\nNew Dialog"
+    ID_NEW_ICON             "Creates a new icon resource\nNew Icon"
+    ID_NEW_MENU             "Creates a new menu resource\nNew Menu"
+    ID_NEW_STRING_TABLE     "Creates a new string table resource\nNew String Table"
+    ID_NEW_TOOLBAR          "Creates a new toolbar resource\nNew Toolbar"
+    ID_NEW_VERSION          "Creates a new version resource\nNew Version"
+    ID_OUTPUT_GOTO_ERROR    "Moves to the line containing current error or tag\nGo to Error"
+    ID_OUTPUT_OPTIONS_AUTOCLEAR "Set flag of automatic clearing"
+    ID_OUTPUT_OPTIONS_AUTOCLOSE "Set flag of automatic closing"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILE_LOADING_s      "Loading %s..."
+    IDS_CODEGENERATOR_CAUSED_ERROR_ss 
+                            "Code generator %s caused next error: ""%s"". It will not be loaded."
+    IDS_CANT_SAVE_DOC_BECAUSE_SAME_EXISTS_s 
+                            "Cannot save document as ""%s"" because the same document exists and is opened right now. "
+    IDS_PROJECT_FILE_ALREADY_EXISTS_s "Project file ""%s"" already exists."
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "MTDEv.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+#define _BCGCONTROLBAR_STATIC_
+#include "bcgcontrolbar.rc"                          // BCG ControlBar resources
+
+// 1 TYPELIB "MTDev.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

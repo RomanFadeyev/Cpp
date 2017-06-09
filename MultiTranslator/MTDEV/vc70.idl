@@ -1,0 +1,22 @@
+import "docobj.idl";
+
+// MTDev.idl : IDL source for MTDev
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MTDev.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[ version(1.0), uuid(B5708153-CD7A-416D-9022-D46E486C53F0), helpstring("MTDev (MultiTranslator) 1.0 Type Library") ]
+library MTDevLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+
+	importlib("stdole2.tlb");
+}
+
+;

@@ -1,0 +1,68 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MTDev - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Temp\RSP1FB.tmp" with contents
+[
+Mpr.lib GUILibD.lib CRTLibD.lib CCObjectsLibD.lib SciLexerD.lib shlwapi.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MTDevD.pdb" /debug /machine:I386 /nodefaultlib:"msvcprtd.lib" /nodefaultlib:"libcd.lib" /out:"Debug/MTDevD.exe" /pdbtype:sept /libpath:"..\BCGControlBar" /libpath:"C:\Projects\&LIB\GUILib\Debug" /libpath:"C:\Projects\&LIB\CRTLib\Debug" /libpath:"C:\Projects\&LIB\CCObjectsLib\Debug" /libpath:"C:\Projects\&LIB\ScintillaDLL\scintilla\vcbuild\Debug" 
+.\Debug\MTDevDoc.obj
+.\Debug\MTDevView.obj
+.\Debug\MTDevDocManager.obj
+.\Debug\ProjectDoc.obj
+.\Debug\ProjectDocTemplate.obj
+.\Debug\ProjectView.obj
+.\Debug\SourceDoc.obj
+.\Debug\SourceView.obj
+.\Debug\AboutDlg.obj
+.\Debug\FindDlg.obj
+.\Debug\GotoLineDlg.obj
+.\Debug\ReplaceDlg.obj
+.\Debug\Splash.obj
+.\Debug\TipDlg.obj
+.\Debug\BaseStructs.obj
+.\Debug\ChildFrm.obj
+.\Debug\ClassTreeCtrl.obj
+.\Debug\CObjectEx.obj
+.\Debug\FileTreeCtrl.obj
+.\Debug\FindComboBox.obj
+.\Debug\InfoBar.obj
+.\Debug\MainFrm.obj
+.\Debug\MTDev.obj
+.\Debug\NewProjectDlg.obj
+.\Debug\OutputBar.obj
+.\Debug\Parser.obj
+.\Debug\ProjectPropsDlg.obj
+.\Debug\ProjectTree_B.obj
+.\Debug\SourceViewEditor.obj
+.\Debug\SourceViewNavigate.obj
+.\Debug\StdAfx.obj
+.\Debug\WatchBar.obj
+.\Debug\WorkspaceBar.obj
+.\Debug\MTDev.res
+]
+Creating command line "link.exe @C:\Temp\RSP1FB.tmp"
+<h3>Output Window</h3>
+Linking...
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::~basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(void)" (??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: char const * __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::c_str(void)const " (?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > & __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::operator+=(char const *)" (??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(char const *,class std::allocator<char> const &)" (??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBDABV?$allocator@D@1@@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > & __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::operator=(char const *)" (??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(class std::allocator<char> const &)" (??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV?$allocator@D@1@@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QAE@XZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall std::_Lockit::_Lockit(void)" (??0_Lockit@std@@QAE@XZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV01@@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""bool __cdecl std::operator<(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (??Mstd@@YA_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@0@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > & __thiscall std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::append(char const *)" (?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBD@Z)" imported
+
+
+
+<h3>Results</h3>
+MTDevD.exe - 0 error(s), 11 warning(s)
+</pre>
+</body>
+</html>

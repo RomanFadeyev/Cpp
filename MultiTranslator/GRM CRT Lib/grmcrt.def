@@ -1,0 +1,107 @@
+;LIBRARY	grmcrt
+
+EXPORTS
+	GetFirstFunc
+	GetNextFunc
+;Math
+	MathCeil
+	MathFloor
+	MathRound
+	MathTrunc
+	MathFact
+	MathSin
+	MathCos
+	MathTan
+	MathExp
+	MathPow
+	MathSqrt
+	MathLog
+	MathPi
+	MathE
+
+;Maps
+	AddToMap
+	MapAddPair
+	CreateMap
+	MapCreate
+	LookupInMap
+	MapLookup
+	MapGetPairCount
+	MapGetKeyAt
+	MapGetValueAt
+	
+;Files	
+	DirExists
+	FileAppend
+	FileChangeExt
+	FileClose
+	FileCreate
+	FileExists
+	FileExtractDir
+	FileFullPath
+	FileInsertAfter
+	FileInsertBefore
+	FileOpen
+	FileRead
+	FileRemove
+	ForceDirectories
+	InstallPackage
+;Strings
+	StrAnsiToOem
+	StrCat
+	StrCmp
+	StrCmpI
+	StrDel
+	StrDeleteFrames
+	StrFillChar
+	StrGetLast
+	StrInsert
+	StrIntersect
+	StrIsFramed
+	StrLeft
+	StrLen
+	StrMid
+	StrMove
+	StrOemToAnsi
+	StrPos
+	StrPosI
+	StrFindRegExp
+	StrQuant
+	StrQuantI
+	StrReplace
+	StrRight
+	StrSubstract
+	StrToDouble
+	StrToDoubleDef
+	StrToInt
+	StrToIntDef
+	StrHexToInt
+	StrHexToIntDef
+	StrBinToInt
+	StrBinToIntDef
+	StrToLower
+	StrToUpper
+	StrIsUpper
+	StrIsLower
+	StrTrim
+	StrTrimLeft
+	StrTrimRight
+	StrUnion
+	StrWrap
+
+;Date and Time
+    DateGetCurrent
+    DateToStr
+    DateDToStr
+    DateTToStr
+    DateGetYear
+    DateGetMonth
+    DateGetDay
+    DateGetHour
+    DateGetMinute
+    DateGetSecond
+    DateGetDayOfWeek
+;Utils
+    Assert
+    LaunchApp
+    LaunchAppAndWait

@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GradientButtonSkin", "GradientButtonSkin.vcproj", "{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = UnicodeDebug
+		ConfigName.3 = UnicodeRelease
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.Debug.ActiveCfg = Debug|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.Debug.Build.0 = Debug|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.Release.ActiveCfg = Release|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.Release.Build.0 = Release|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.UnicodeDebug.ActiveCfg = UnicodeDebug|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.UnicodeDebug.Build.0 = UnicodeDebug|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.UnicodeRelease.ActiveCfg = UnicodeRelease|Win32
+		{CE59D7AE-DBE4-4122-8FAF-C20AE285510F}.UnicodeRelease.Build.0 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+//
+// AutoSvr.idl : IDL source for AutoSvr.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AutoSvr.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(07C8697D-368B-46e9-8311-13DB6FA4C892),
+	dual,
+	helpstring("ILanguageCodeGenerator Interface"),
+	pointer_default(unique)
+]
+interface ILanguageCodeGenerator : IUnknown
+{
+};

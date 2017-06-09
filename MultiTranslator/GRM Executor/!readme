@@ -1,0 +1,4 @@
+В этом проекте 3 конфигурации: exe (Debug,Release), exe_sfx (Debug,Release) и dll (Debug_DLL, Release_DLL).
+Перед компиляцией убедитесь, какая конфигурация установлена  в Configuration Manager
+
+Для exe_sfx также в свойствах проекта задан макрос _SFX_

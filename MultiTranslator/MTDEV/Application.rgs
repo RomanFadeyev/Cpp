@@ -1,0 +1,24 @@
+HKCR
+{
+	MTDev.Application.1 = s 'Application Class'
+	{
+		CLSID = s '{D0DEE720-92BE-4787-BC6C-98A4B558858A}'
+	}
+	MTDev.Application = s 'Application Class'
+	{
+		CLSID = s '{D0DEE720-92BE-4787-BC6C-98A4B558858A}'
+		CurVer = s 'MTDev.Application.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D0DEE720-92BE-4787-BC6C-98A4B558858A} = s 'Application Class'
+		{
+			ProgID = s 'MTDev.Application.1'
+			VersionIndependentProgID = s 'MTDev.Application'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{B5708153-CD7A-416D-9022-D46E486C53F0}'
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/********************************************************************
+	created:	2003/12/24
+	created:	24:12:2003   17:08
+	filename: 	c:\projects\multitranslator.v2.5\sources\grm language generator\cppgen.idl
+	file path:	c:\projects\multitranslator.v2.5\sources\grm language generator
+	file base:	cppgen
+	file ext:	idl
+	author:		Fadeyev
+	
+	purpose:	Declaration of interfaces of code generators
+*********************************************************************/
+
+import "unknwn.idl";
+
+
+//Interfaces -------------------------------------------------------------
+
+[
+	uuid(07C8697D-368B-46e9-8311-13DB6FA4C892),
+	object,
+	helpstring("ILanguageCodeGenerator Interface")
+]
+interface ILanguageCodeGenerator : IUnknown
+{
+	[helpstring("method GetProperties")] 
+	HRESULT GetProperties([out] BSTR* pName,[out] BSTR* pDescription);
+
+	[helpstring("method OnGrmItem")] 
+	HRESULT OnGrmItem([in] BSTR RuleName, [in] BSTR VariantName, [in] BSTR TermName, [in] ULONG ItemID);
+	
+	[helpstring("method Begin")] 
+	HRESULT Begin([in] BSTR WorkDir, [in] BSTR ProjectPath);
+	
+	[helpstring("method End")] 
+	HRESULT End();
+};
+
+
+//Library ----------------------------------------------------------------
+[
+	uuid(E1863F87-966B-46E4-81D6-DAB8A561E54A),
+	version (1.0),
+	helpstring("Multitranslator Code Generator Library")
+]
+library LanguageCodeGenerator
+{
+	importlib("stdole2.tlb");
+	interface ILanguageCodeGenerator;
+};
+

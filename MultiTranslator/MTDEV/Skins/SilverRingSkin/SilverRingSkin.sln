@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SilverRingSkin", "SilverRingSkin.vcproj", "{68D34537-898E-417B-9E62-07C804C169F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = UnicodeDebug
+		ConfigName.3 = UnicodeRelease
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{68D34537-898E-417B-9E62-07C804C169F9}.Debug.ActiveCfg = Debug|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.Debug.Build.0 = Debug|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.Release.ActiveCfg = Release|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.Release.Build.0 = Release|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.UnicodeDebug.ActiveCfg = UnicodeDebug|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.UnicodeDebug.Build.0 = UnicodeDebug|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.UnicodeRelease.ActiveCfg = UnicodeRelease|Win32
+		{68D34537-898E-417B-9E62-07C804C169F9}.UnicodeRelease.Build.0 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
